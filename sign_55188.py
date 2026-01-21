@@ -43,7 +43,7 @@ def main():
     if not COOKIE:
         msg = "❌ 未设置 SIGN_COOKIE"
         print(msg)
-        pushplus("55188 签到失败", msg)
+        pushplus("理想论坛 签到失败", msg)
         return
 
     try:
@@ -53,33 +53,33 @@ def main():
 
         if r.status_code == 200 and "success" in r.text:
             msg = f"""
-### ✅ 55188 签到成功
+### ✅ 理想论坛 签到成功
 
 - 时间：{now}
 - 返回：`{r.text}`
 """
             print("签到成功")
-            pushplus("55188 签到成功", msg)
+            pushplus("理想论坛 签到成功", msg)
         else:
             msg = f"""
-### ❌ 55188 签到失败
+### ❌ 理想论坛 签到失败
 
 - 时间：{now}
 - HTTP：{r.status_code}
 - 返回：`{r.text}`
 """
             print("签到失败")
-            pushplus("55188 签到失败", msg)
+            pushplus("理想论坛 签到失败", msg)
 
     except Exception as e:
         msg = f"""
-### ❌ 55188 签到异常
+### ❌ 理想论坛 签到异常
 
 - 时间：{now}
 - 错误：`{str(e)}`
 """
         print(msg)
-        pushplus("55188 签到异常", msg)
+        pushplus("理想论坛 签到异常", msg)
 
 
 if __name__ == "__main__":
