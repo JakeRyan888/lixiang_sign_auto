@@ -31,5 +31,6 @@ jobs:
       env:
         SIGN_COOKIE: ${{ secrets.SIGN_COOKIE }}
         PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+        SIGN_IP: ${{ secrets.SIGN_IP }}
       run: |
         python sign_55188.py
